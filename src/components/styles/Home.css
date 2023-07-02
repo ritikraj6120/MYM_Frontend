@@ -1,0 +1,20 @@
+.fitted__image {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+.custom__navbar{
+	display:flex;
+	flex-direction: row;
+	justify-content:flex-end;
+	align-items: baseline;
+}
+
+.navbar__items{
+	display:flex;
+	justify-content: space-between;
+}
+.navbar__item{
+	color:white;
+}
