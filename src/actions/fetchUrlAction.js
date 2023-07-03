@@ -4,7 +4,8 @@ import {
     ITEMS_GET_FAIL,
 } from "../constants/itemConstant";
 
-const host = "https://mym-backend-fawn.vercel.app";
+const host = "http://ec2-13-233-236-156.ap-south-1.compute.amazonaws.com:5000";
+// const host ="http://localhost:5000"
 
 export const fetchUrl = () => async (dispatch) => {
     try {

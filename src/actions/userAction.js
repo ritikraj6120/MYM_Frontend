@@ -17,17 +17,16 @@ import {
     notifyUnAuthorized,
     notifyWarning,
 } from "../alert";
-const host = "https://mym-backend-fawn.vercel.app";
+
+const host = "http://ec2-13-233-236-156.ap-south-1.compute.amazonaws.com:5000";
 
 export const login = (user, history) => async (dispatch) => {
     try {
         dispatch({
             type: USER_LOGIN_REQUEST,
         });
-        const response = await fetch(`${host}/api/auth/signin`, {
+        const response = await fetch(`${host}/signin`, {
             method: "POST",
-            credentials: "include",
-            withCredentials: true,
             headers: {
                 "Content-Type": "application/json",
             },
@@ -160,7 +159,7 @@ export const signup = (user, history) => async (dispatch) => {
             type: USER_REGISTER_REQUEST,
         });
 
-        const response = await fetch(`${host}/api/auth/signup`, {
+        const response = await fetch(`${host}/signup`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
